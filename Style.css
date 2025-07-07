@@ -247,7 +247,7 @@ input.error-highlight {
 }
 
 .navbar a {
-  color: #fff;
+  color: red !important;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
@@ -255,7 +255,7 @@ input.error-highlight {
 }
 
 .navbar a:hover {
-  color: red;
+  color: #fff !important;
 }
 
 .export-buttons {
@@ -305,12 +305,10 @@ input.error-highlight {
 /* Hamburger Menu Styles */
 .navbar-toggle {
   display: none;
+  font-size: 2rem;
   background: none;
   border: none;
-  color: white;
-  font-size: 1.5rem;
   cursor: pointer;
-  padding: 5px;
 }
 
 /* Responsive Design Media Queries */
@@ -485,5 +483,45 @@ input.error-highlight {
   }
   .navbar-toggle {
     display: none;
+  }
+}
+
+/* Show nav links by default */
+#navLinks {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Hide hamburger icon on desktop */
+.navbar-toggle {
+  display: none;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  #navLinks {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px; /* adjust based on navbar height */
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+  }
+  #navLinks.show {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }

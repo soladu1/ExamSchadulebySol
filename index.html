@@ -157,5 +157,12 @@
       <!-- Show exam schedule from database -->
     </div>
     <script src="Soljs.js"></script>
+    <script>
+      // Hamburger menu toggle
+      document.getElementById('menuToggle').addEventListener('click', function() {
+        var navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('show');
+      });
+    </script>
   </body>
 </html>
